@@ -5,42 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tim Hebat - LATIKA 2026</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts untuk kesan modern -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header / Navigasi -->
+    <!-- Navigasi Atas -->
     <header>
         <div class="logo">🚀 SquadLATIKA</div>
         <button id="theme-toggle">🌙 Mode</button>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Inovasi Tanpa Batas Bersama Kami</h1>
-        <p>Kenali lebih dekat tim di balik karya terbaik untuk LATIKA 2026.</p>
-        <a href="#team" class="btn">Kenalan Yuk!</a>
-    </section>
+    <!-- Container Utama Slide -->
+    <main class="slide-container">
+        
+        <!-- SLIDE 1: Hero Section -->
+        <section class="slide active" id="slide-1">
+            <div class="hero-content">
+                <h1>Inovasi Tanpa Batas Bersama Kami</h1>
+                <p>Kenali lebih dekat tim di balik karya terbaik untuk LATIKA 2026.</p>
+                <button class="btn" onclick="nextSlide()">Mulai Jelajahi ➔</button>
+            </div>
+        </section>
 
-    <!-- Team Section -->
-    <section id="team" class="team-container">
-        <h2>Anggota Tim</h2>
-        <div class="card-grid">
-            <!-- Anggota 1 -->
-            <div class="card" onclick="openModal('Andi Pratama', 'Hustler & Project Manager', 'Suka memimpin dan merancang strategi.')">
-                <img src="https://via.placeholder.com/150" alt="Foto Andi">
-                <h3>Andi Pratama</h3>
-                <p>Project Manager</p>
+        <!-- SLIDE 2: Profil Anggota Tim -->
+        <section class="slide" id="slide-2">
+            <h2>Anggota Tim Kami</h2>
+            <p>Klik pada kartu untuk melihat detail keahlian.</p>
+            <div class="card-grid">
+                <!-- Anggota 1 -->
+                <div class="card" onclick="openModal('Andi Pratama', 'Hustler & Project Manager', 'Suka memimpin dan merancang strategi inovasi.')">
+                    <img src="https://via.placeholder.com/100" alt="Foto Andi">
+                    <h3>Andi Pratama</h3>
+                    <p>Project Manager</p>
+                </div>
+                <!-- Anggota 2 -->
+                <div class="card" onclick="openModal('Siti Rahma', 'UI/UX Designer', 'Berfokus pada kenyamanan dan keindahan visual.')">
+                    <img src="https://via.placeholder.com/100" alt="Foto Siti">
+                    <h3>Siti Rahma</h3>
+                    <p>Lead Designer</p>
+                </div>
             </div>
-            <!-- Anggota 2 -->
-            <div class="card" onclick="openModal('Siti Rahma', 'UI/UX Designer', 'Berfokus pada kenyamanan dan keindahan visual.')">
-                <img src="https://via.placeholder.com/150" alt="Foto Siti">
-                <h3>Siti Rahma</h3>
-                <p>Lead Designer</p>
+        </section>
+
+        <!-- SLIDE 3: Tech Stack & Visi Kelompok -->
+        <section class="slide" id="slide-3">
+            <h2>Visi & Alat Kerja Kami</h2>
+            <div class="vision-box">
+                <p>"Menciptakan solusi digital yang berdampak nyata melalui kolaborasi dan teknologi."</p>
             </div>
-        </div>
-    </section>
+            <h3>Tech Stack LATIKA 2026:</h3>
+            <div class="tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">GitHub</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Kontrol Tombol Navigasi Slide (Di Bawah Layar) -->
+    <div class="slide-controls">
+        <button class="nav-btn" id="prevBtn" onclick="prevSlide()">❮ Kembali</button>
+        <span id="slide-indicator">Slide 1 dari 3</span>
+        <button class="nav-btn" id="nextBtn" onclick="nextSlide()">Lanjut ❯</button>
+    </div>
 
     <!-- Modal Pop-up Interaktif -->
     <div id="modal" class="modal">
@@ -51,10 +80,6 @@
             <p id="modal-desc"></p>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Tim LATIKA. Dibuat dengan semangat kolaborasi.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
