@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Hebat - LATIKA 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts untuk kesan modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navigasi -->
+    <header>
+        <div class="logo">🚀 SquadLATIKA</div>
+        <button id="theme-toggle">🌙 Mode</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Inovasi Tanpa Batas Bersama Kami</h1>
+        <p>Kenali lebih dekat tim di balik karya terbaik untuk LATIKA 2026.</p>
+        <a href="#team" class="btn">Kenalan Yuk!</a>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-container">
+        <h2>Anggota Tim</h2>
+        <div class="card-grid">
+            <!-- Anggota 1 -->
+            <div class="card" onclick="openModal('Andi Pratama', 'Hustler & Project Manager', 'Suka memimpin dan merancang strategi.')">
+                <img src="https://via.placeholder.com/150" alt="Foto Andi">
+                <h3>Andi Pratama</h3>
+                <p>Project Manager</p>
+            </div>
+            <!-- Anggota 2 -->
+            <div class="card" onclick="openModal('Siti Rahma', 'UI/UX Designer', 'Berfokus pada kenyamanan dan keindahan visual.')">
+                <img src="https://via.placeholder.com/150" alt="Foto Siti">
+                <h3>Siti Rahma</h3>
+                <p>Lead Designer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Pop-up Interaktif -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-name"></h2>
+            <h4 id="modal-role" style="color: #6366f1;"></h4>
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tim LATIKA. Dibuat dengan semangat kolaborasi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
